@@ -1,5 +1,4 @@
-# Bachelor Thesis Project
-## Evaluation of Network Intrusion Detection Using Machine Learning
+# Evaluating the Fidelity and Utility of CTGAN-generated Synthetic Firewall Logs through Statistical and Structural Analysis
 
 ## Overview
 This project is the implementation component of a bachelor thesis focused on the application and evaluation of machine learning techniques for network intrusion detection. The primary objective is to analyze how different data preprocessing strategies and feature representations affect the performance of supervised learning models on intrusion detection datasets.
