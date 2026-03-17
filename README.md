@@ -1,17 +1,19 @@
-# Evaluating the Fidelity and Utility of CTGAN-generated Synthetic Firewall Logs through Statistical and Structural Analysis
+# Evaluating CTGAN-generated Synthetic Firewall Logs through Statistical and Structural Analysis
 
 ## Overview
-This project is the implementation component of a bachelor thesis focused on the application and evaluation of machine learning techniques for network intrusion detection. The primary objective is to analyze how different data preprocessing strategies and feature representations affect the performance of supervised learning models on intrusion detection datasets.
 
-All experiments are conducted using Python and Jupyter Notebooks.
+Implementation component of a bachelor thesis on ML-based network intrusion detection. The main question: how much do preprocessing decisions and feature representations actually affect model performance?
+
+All experiments run in Python and Jupyter Notebooks.
 
 ## Problem Statement
-Traditional rule-based intrusion detection systems struggle to scale and adapt to evolving network threats. Machine learning offers a data-driven alternative, but its effectiveness depends heavily on data quality, preprocessing decisions, and feature engineering choices.
 
-This project investigates:
-- The impact of raw versus processed network traffic features
-- The trade-offs between minimal and extensive feature engineering
-- The robustness of models across synthetic and real-world datasets
+Rule-based IDS doesn't scale and struggles with novel attack patterns. ML handles this better in principle, but performance depends heavily on the data pipeline, not just the model.
+
+This project examines three things:
+- Raw versus processed network traffic features as model input
+- Whether heavier feature engineering pays off
+- Model robustness across synthetic and real-world data
 
 ## Project Structure
 ```
@@ -34,55 +36,25 @@ bachelor-thesis/
 ```
 
 ## Datasets
-The project uses benchmark and real intrusion detection datasets.
 
-A curated subset of the CICIDS dataset is employed, selected and preprocessed to support controlled experimentation and reproducibility. The dataset is stored locally in multiple derived forms representing different feature engineering strategies.
+A curated CICIDS subset, stored in multiple derived forms — each representing a different preprocessing strategy.
 
 ## Methodology
-1. Data preprocessing
-   - Cleaning and normalization
-   - Feature selection and transformation
-   - Dataset partitioning
 
-2. Feature engineering strategies
-   - Raw feature baseline
-   - Reduced feature representation
-   - Over-engineered feature set
+Preprocessing covers cleaning, normalization, feature selection, and partitioning. Three feature engineering strategies are compared: a raw baseline, a reduced feature set, and an over-engineered variant. All models are evaluated on the same metrics to keep comparisons clean.
 
-3. Model training and evaluation
-   - Supervised learning models
-   - Consistent evaluation metrics
-   - Comparative analysis of results
+## Findings
 
-## Key Findings
-- Feature engineering significantly affects model performance.
-- Over-engineering does not consistently improve results.
-- Data preprocessing quality is as important as model choice.
+More feature engineering didn't help reliably. The over-engineered feature set performed worse or comparably to simpler representations in most experiments. Preprocessing quality ended up mattering about as much as model choice — sometimes more.
 
-## Technologies Used
-- Python
-- Jupyter Notebook
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Seaborn
+## Technologies
+
+Python, Jupyter Notebook, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
 
 ## How to Run
-1. Ensure Python 3.x is installed.
-2. Install dependencies:
 ```
 pip install pandas numpy scikit-learn matplotlib seaborn jupyter
-```
-3. Start Jupyter:
-```
 jupyter notebook
 ```
-4. Run notebooks starting with RAW.ipynb or UCIdata.ipynb.
 
-## Skills Demonstrated
-- Applied machine learning
-- Experimental design
-- Feature engineering
-- Data analysis
-- Reproducible research
+Start with `RAW.ipynb` or `UCIdata.ipynb`.
